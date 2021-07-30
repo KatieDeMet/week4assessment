@@ -25,8 +25,12 @@ def large_order(log_file):
     for line in log_file:
         line = line.rstrip()
         line = line.split(' ')
+        
         if int(line[2]) > 10:
-            print(line)
+            print_string = ''
+            for e in line:
+                print_string += e + ' '
+            print(print_string)
 
 large_order(log_file)
 log_file.close()
