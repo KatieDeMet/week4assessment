@@ -17,3 +17,17 @@ def sales_reports(log_file):
 
 #runs the function
 sales_reports(log_file)
+log_file.close()
+#Extra Credit Portion
+log_file = open("um-server-01.txt")
+
+def large_order(log_file):
+    for line in log_file:
+        line = line.rstrip()
+        line = line.split(' ')
+        if int(line[2]) > 10:
+            print(line)
+
+large_order(log_file)
+log_file.close()
+
